@@ -1,6 +1,7 @@
 .skills {
   background: var(--primary-bg);
   position: relative;
+  padding: 100px 0;
 }
 
 .skills-intro {
@@ -10,6 +11,7 @@
   font-size: 1.1rem;
   color: var(--text-secondary);
   line-height: 1.8;
+  padding: 0 1rem;
 }
 
 .skills-intro strong {
@@ -103,10 +105,41 @@
   bottom: -30%;
 }
 
+/* Tablet (768px - 1024px) */
+@media (max-width: 1024px) {
+  .skills {
+    padding: 80px 0;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 1.8rem;
+  }
+
+  .skill-card {
+    padding: 1.8rem 1.3rem;
+  }
+
+  .skill-icon {
+    font-size: 3rem;
+  }
+}
+
+/* Tablet Portrait (768px) */
 @media (max-width: 768px) {
+  .skills {
+    padding: 60px 0;
+  }
+
+  .skills-intro {
+    font-size: 1rem;
+    max-width: 600px;
+  }
+
   .skills-grid {
     grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
     gap: 1.5rem;
+    margin-top: 3rem;
   }
 
   .skill-card {
@@ -119,5 +152,80 @@
 
   .skill-name {
     font-size: 0.9rem;
+  }
+
+  .skill-card:hover {
+    transform: translateY(-5px) scale(1.02);
+  }
+}
+
+/* Mobile (480px - 640px) */
+@media (max-width: 640px) {
+  .skills {
+    padding: 50px 0;
+  }
+
+  .skills-intro {
+    font-size: 0.95rem;
+    margin: 0.5rem auto 0;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 1.2rem;
+    margin-top: 2.5rem;
+  }
+
+  .skill-card {
+    padding: 1.2rem 0.8rem;
+    border-radius: 10px;
+  }
+
+  .skill-icon {
+    font-size: 2.2rem;
+  }
+
+  .skill-name {
+    font-size: 0.85rem;
+  }
+}
+
+/* Small Mobile (< 480px) */
+@media (max-width: 480px) {
+  .skills-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+
+  .skill-card {
+    padding: 1rem 0.6rem;
+  }
+
+  .skill-icon {
+    font-size: 2rem;
+  }
+
+  .skill-name {
+    font-size: 0.8rem;
+  }
+}
+
+/* Extra Small Mobile (< 375px) */
+@media (max-width: 375px) {
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.8rem;
+  }
+
+  .skill-card {
+    padding: 1rem 0.5rem;
+  }
+
+  .skill-icon {
+    font-size: 1.8rem;
+  }
+
+  .skill-name {
+    font-size: 0.75rem;
   }
 }

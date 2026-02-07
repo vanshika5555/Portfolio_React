@@ -1,5 +1,6 @@
 .contact {
   background: var(--primary-bg);
+  padding: 100px 0;
 }
 
 .contact-intro {
@@ -9,6 +10,7 @@
   font-size: 1.1rem;
   color: var(--text-secondary);
   line-height: 1.8;
+  padding: 0 1rem;
 }
 
 .contact-content {
@@ -82,7 +84,6 @@
   color: var(--text-primary);
 }
 
-/* Hero-style circular social icons */
 .social-icons-grid {
   display: flex;
   gap: 1.5rem;
@@ -196,6 +197,22 @@
   padding: 1.2rem;
 }
 
+/* Tablet (768px - 1024px) */
+@media (max-width: 1024px) {
+  .contact {
+    padding: 80px 0;
+  }
+
+  .contact-content {
+    gap: 3rem;
+  }
+
+  .contact-form {
+    padding: 2.2rem;
+  }
+}
+
+/* Tablet Portrait (768px - 968px) */
 @media (max-width: 968px) {
   .contact-content {
     grid-template-columns: 1fr;
@@ -205,19 +222,167 @@
   .contact-form {
     padding: 2rem;
   }
+
+  .contact-info {
+    gap: 2rem;
+  }
 }
 
-@media (max-width: 640px) {
-  .contact-form {
+/* Mobile (640px - 768px) */
+@media (max-width: 768px) {
+  .contact {
+    padding: 60px 0;
+  }
+
+  .contact-intro {
+    font-size: 1rem;
+    margin: 0.8rem auto 3rem;
+  }
+
+  .contact-content {
+    margin-top: 3rem;
+    gap: 2.5rem;
+  }
+
+  .info-card {
     padding: 1.5rem;
+  }
+
+  .info-icon {
+    width: 45px;
+    height: 45px;
+  }
+
+  .info-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .contact-social h3 {
+    font-size: 1.2rem;
+  }
+
+  .social-link {
+    width: 45px;
+    height: 45px;
+    font-size: 1.3rem;
+  }
+}
+
+/* Mobile (< 640px) */
+@media (max-width: 640px) {
+  .contact {
+    padding: 50px 0;
+  }
+
+  .contact-intro {
+    font-size: 0.95rem;
+    margin: 0.5rem auto 2.5rem;
+  }
+
+  .contact-content {
+    gap: 2rem;
+  }
+
+  .contact-info {
+    gap: 1.5rem;
   }
 
   .info-card {
     flex-direction: column;
     text-align: center;
+    padding: 1.5rem 1.2rem;
+  }
+
+  .info-card h3 {
+    font-size: 1rem;
   }
 
   .social-icons-grid {
     justify-content: center;
+    gap: 1.2rem;
+  }
+
+  .contact-form {
+    padding: 1.5rem;
+    border-radius: 12px;
+  }
+
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    padding: 0.9rem 1.2rem;
+    font-size: 0.95rem;
+  }
+
+  .form-group textarea {
+    min-height: 130px;
+  }
+
+  .contact-form .btn {
+    font-size: 1rem;
+    padding: 1rem;
+  }
+}
+
+/* Small Mobile (< 480px) */
+@media (max-width: 480px) {
+  .contact {
+    padding: 40px 0;
+  }
+
+  .info-card {
+    padding: 1.2rem 1rem;
+  }
+
+  .info-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .social-link {
+    width: 42px;
+    height: 42px;
+    font-size: 1.2rem;
+  }
+
+  .contact-form {
+    padding: 1.2rem;
+  }
+
+  .form-group label {
+    font-size: 0.95rem;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    padding: 0.8rem 1rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* Extra Small Mobile (< 375px) */
+@media (max-width: 375px) {
+  .contact-intro {
+    font-size: 0.9rem;
+  }
+
+  .info-card h3 {
+    font-size: 0.95rem;
+  }
+
+  .info-card a {
+    font-size: 0.9rem;
+  }
+
+  .contact-social h3 {
+    font-size: 1.1rem;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    font-size: 0.85rem;
   }
 }

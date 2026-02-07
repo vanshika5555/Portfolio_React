@@ -1,5 +1,6 @@
 .about {
   background: linear-gradient(180deg, var(--primary-bg) 0%, var(--secondary-bg) 100%);
+  padding: 100px 0;
 }
 
 .about-content {
@@ -9,6 +10,7 @@
 .about-text {
   max-width: 900px;
   margin: 0 auto 4rem;
+  padding: 0 1rem;
 }
 
 .about-paragraph {
@@ -89,12 +91,140 @@
   font-weight: 600;
 }
 
+/* Tablet (768px - 1024px) */
+@media (max-width: 1024px) {
+  .about {
+    padding: 80px 0;
+  }
+
+  .about-content {
+    margin-top: 3rem;
+  }
+
+  .about-text {
+    margin-bottom: 3rem;
+  }
+
+  .about-stats {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1.8rem;
+  }
+
+  .stat-number {
+    font-size: 2.5rem;
+  }
+}
+
+/* Tablet Portrait (768px) */
 @media (max-width: 768px) {
+  .about {
+    padding: 60px 0;
+  }
+
   .about-paragraph {
     font-size: 1rem;
+    line-height: 1.8;
   }
 
   .about-stats {
     grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-top: 3rem;
+  }
+
+  .stat-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .stat-number {
+    font-size: 2.5rem;
+  }
+
+  .stat-label {
+    font-size: 0.95rem;
+  }
+}
+
+/* Mobile (480px - 640px) */
+@media (max-width: 640px) {
+  .about {
+    padding: 50px 0;
+  }
+
+  .about-content {
+    margin-top: 2.5rem;
+  }
+
+  .about-text {
+    margin-bottom: 2.5rem;
+  }
+
+  .about-paragraph {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin-bottom: 1.2rem;
+    padding-left: 0.8rem;
+  }
+
+  .about-paragraph:hover {
+    padding-left: 1.2rem;
+  }
+
+  .about-stats {
+    gap: 1.2rem;
+    margin-top: 2.5rem;
+  }
+
+  .stat-card {
+    padding: 1.8rem 1.2rem;
+  }
+
+  .stat-number {
+    font-size: 2.2rem;
+  }
+
+  .stat-label {
+    font-size: 0.9rem;
+    letter-spacing: 1.5px;
+  }
+}
+
+/* Small Mobile (< 480px) */
+@media (max-width: 480px) {
+  .about {
+    padding: 40px 0;
+  }
+
+  .about-paragraph {
+    font-size: 0.9rem;
+    padding-left: 0.7rem;
+    border-left-width: 2px;
+  }
+
+  .stat-card {
+    padding: 1.5rem 1rem;
+  }
+
+  .stat-number {
+    font-size: 2rem;
+  }
+
+  .stat-label {
+    font-size: 0.85rem;
+  }
+}
+
+/* Extra Small Mobile (< 375px) */
+@media (max-width: 375px) {
+  .about-paragraph {
+    font-size: 0.85rem;
+  }
+
+  .stat-number {
+    font-size: 1.8rem;
+  }
+
+  .stat-label {
+    font-size: 0.8rem;
   }
 }

@@ -72,7 +72,7 @@ const Hero = () => {
 
             <div className="hero-buttons">
               <a 
-                href="/assets/VANSHIKA RESUME.pdf" 
+                href="/assets/VANSHIKA_RESUME.pdf" 
                 download 
                 className="btn btn-primary"
               >
